@@ -11,20 +11,22 @@ import config
 
 def send_message(sender_id, text):
 	logging.debug('started debugging')
-	url = 'https://graph.facebook.com/v2.6/me/messages?access_token=' + token
+	url = 'https://graph.facebook.com/v2.6/me/messages?access_token=' + config.FB_MESSENGER_TOKEN
+	print url
 
 	json_data = {
 		"recipient": {"id": sender_id},
 		"message": {"text": text + " to you!"}
 	}
 
+	data = urllib.urlencode(json_data)
 	params = {
     	"access_token": config.FB_MESSENGER_TOKEN
     }
-	urllib2.urlopen(url, json.dumps(json_data))
+	u = urllib.urlopen(url, data)
 
 	# r = requests.post('https://graph.facebook.com/v2.6/me/messages', json=json_data, params=params)
-	logging.debug(str(r.status_code) + " " + r.text)
+	# logging.debug(str(r.status_code) + " " + r.text)
 
 class MainHandler(webapp2.RequestHandler):
 
@@ -45,7 +47,7 @@ class MainHandler(webapp2.RequestHandler):
 			sender = event['sender']['id']
 			if event['message'] and event['message']['text']:
 				text = event['message']['text']
-				# send_message(sender, text)
+				send_message(sender, text)
 		self.response.http_status_message(200)
 
 
