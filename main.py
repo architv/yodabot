@@ -24,6 +24,7 @@ def send_message(sender_id, text):
     	"access_token": config.FB_MESSENGER_TOKEN
     }
 	u = urllib.urlopen(url, data)
+	logging.debug(u.getcode())
 
 	# r = requests.post('https://graph.facebook.com/v2.6/me/messages', json=json_data, params=params)
 	# logging.debug(str(r.status_code) + " " + r.text)
