@@ -11,7 +11,7 @@ def main():
 	if verification_code == verify_token:
 		return request.args.get("hub.challenge")
 	else:
-		return request.args
+		return 'hello world'
 
 
 if __name__ == "__main__":
