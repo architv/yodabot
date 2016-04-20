@@ -21,4 +21,4 @@ if __name__ == "__main__":
 	# and start the app listening on that port
 	# Read http://virantha.com/2013/11/14/starting-a-simple-flask-app-with-heroku/
 	port = int(os.environ.get("PORT", 8000))
-	app.run(host='0.0.0.0', port=8000)
+	app.run(host='0.0.0.0', port=port)
