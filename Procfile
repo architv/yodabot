@@ -1,1 +1,1 @@
-web: gunicorn bot.py:app --log-file -
+web: python bot.py --noreload
