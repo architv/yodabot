@@ -35,11 +35,13 @@ def main():
 		body = request.data
 		print "BODY" + body
         messaging_events = json.loads(body)['entry'][0]['messaging']
-        for event in messaging_events:
-        	sender = event['sender']['id']
-        	if event['message'] and event['message']['text']:
-        		text = event['message']['text']
-        		send_message(sender, text)
+        sender = messaging_events[0]['sender']['id']
+        text = messaging_events['message']['text']
+        # for event in messaging_events:
+        # 	sender = event['sender']['id']
+        # 	if event['message'] and event['message']['text']:
+        # 		text = event['message']['text']
+        send_message(sender, text)
 		return 'received'
 
 	else:
