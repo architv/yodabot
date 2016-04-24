@@ -10,22 +10,25 @@ import config
 app = Flask(__name__)
 
 def send_message(sender_id, text):
-  str = urllib.quote(text)
-  opener = urllib2.build_opener()
-  opener.addheaders = [("X-Mashape-Authorization", config.MASHAPE_AUTHORIZATION)]
-  socket = opener.open('https://yoda.p.mashape.com/yoda?sentence=' +
-    str)
-  content = socket.read()
-  text = "Yoda says: " + content
-  json_data = {
-		"recipient": {"id": sender_id},
-		"message": {"text": text}
-	}
-  params = {
-		"access_token": config.FB_MESSENGER_TOKEN
-	}
-  r = requests.post('https://graph.facebook.com/v2.6/me/messages', json=json_data, params=params)
-  print(r, r.status_code, r.text)
+  try:
+    str = urllib.quote(text)
+    opener = urllib2.build_opener()
+    opener.addheaders = [("X-Mashape-Authorization", config.MASHAPE_AUTHORIZATION)]
+    socket = opener.open('https://yoda.p.mashape.com/yoda?sentence=' +
+      str)
+    content = socket.read()
+    text = "Yoda says: " + content
+    json_data = {
+  		"recipient": {"id": sender_id},
+  		"message": {"text": text}
+  	}
+    params = {
+  		"access_token": config.FB_MESSENGER_TOKEN
+  	}
+    r = requests.post('https://graph.facebook.com/v2.6/me/messages', json=json_data, params=params)
+    print(r, r.status_code, r.text)
+  except:
+    pass
 
 
 @app.route("/", methods=['POST', 'GET'])
