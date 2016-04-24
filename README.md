@@ -14,4 +14,5 @@ http://m.me/1621772074813073
 
 ## Deploy
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
