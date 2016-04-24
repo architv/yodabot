@@ -6,7 +6,7 @@ Master Yoda, I am. Left Degobah I have, and come to messenger as a bot.
 
 ## Demo
 
-<iframe class="imgur-embed" width="100%" height="720" frameborder="0" src="http://i.imgur.com/3laMtOK.gifv#embed"></iframe>
+![Imgur](http://i.imgur.com/IzoW1n8.gifv)
 ![](http://i.imgur.com/gn1Qa51.png?1)
 
 ## Live
