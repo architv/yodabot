@@ -1,0 +1,6 @@
+{
+  "name": "YodaBot",
+  "description": "A messenger bot for Master Yoda",
+  "repository": "https://github.com/architv/yodabot",
+  "keywords": ["python", "facebook", "chatbot"]
+}
