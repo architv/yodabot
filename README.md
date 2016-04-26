@@ -1,4 +1,4 @@
-# YodaBot
+# YodaBot (Beta)
 
 Master Yoda, I am. Left Degobah I have, and come to messenger as a bot.
 
@@ -10,7 +10,7 @@ Master Yoda, I am. Left Degobah I have, and come to messenger as a bot.
 
 ![](http://i.imgur.com/gn1Qa51.png?1)
 
-[Watch video](https://vimeo.com/163974400)
+### **[Watch Video](https://vimeo.com/163974400)**
 
 ## Live
 
